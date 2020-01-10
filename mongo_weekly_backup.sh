@@ -1,5 +1,5 @@
 filename=$(date +"%Y-week%V")
-
+)
 pwd=$(pwd)
 dir="$pwd/mongodb_backups/weekly"
 
@@ -9,8 +9,8 @@ if [ ! -d "$dir" ]; then
     mkdir -p $dir
 fi
 
-echo "\n---------------------------------------"
-echo "\n---------------------------------------"
+date=$(date +"%D"
+echo "\n$date----------------------------------"
 echo "\n---------------------------------------"
 echo "\n---------------------------------------"
 echo "Creating MongoDB backup: $filename\n"
