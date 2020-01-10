@@ -12,7 +12,7 @@ fi
 date=$(date +"%D")
 echo "\n$date##############################################"
 
-echo "Creating MongoDB backup: $filename\n"
+echo "Creating MongoDB backup: $path\n"
 
 
 mongodump --gzip --archive="$path"
