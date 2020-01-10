@@ -1,7 +1,6 @@
 filename=$(date +"%a")
-pwd=$(pwd)
+dir="/data/Mongo_backup/mongodb_backups/weekly"
 
-dir="$pwd/mongodb_backups/daily"
 path="$dir/$filename.gz"
 
 if [ ! -d "$dir" ]; then

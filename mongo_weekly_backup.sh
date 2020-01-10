@@ -1,7 +1,5 @@
 filename=$(date +"%Y-week%V")
-)
-pwd=$(pwd)
-dir="$pwd/mongodb_backups/weekly"
+dir="/data/Mongo_backup/mongodb_backups/weekly"
 
 path="$dir/$filename.gz"
 
