@@ -10,22 +10,17 @@ if [ ! -d "$dir" ]; then
 fi
 
 date=$(date +"%D")
-echo "\n$date----------------------------------"
-echo "\n---------------------------------------"
-echo "\n---------------------------------------"
+echo "\n$date##############################################"
+
 echo "Creating MongoDB backup: $filename\n"
 
 
-#mongodump --gzip --archive="$path"
+mongodump --gzip --archive="$path"
 
 if [ $? -eq 0 ]
     then
-        echo "\n----------------------------------------"
         echo "-> Backup succeed, created at: $path"
-        echo "Done!\n"
-
     else
         echo "\n---------Error  Error  Error-------------"
         echo "-> Backup Failed, created at: $path"
-        echo "-----------------------------------------\n"
 fi
