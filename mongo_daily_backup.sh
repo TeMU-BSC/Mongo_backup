@@ -1,5 +1,5 @@
 filename=$(date +"%a")
-dir="/data/Mongo_backup/mongodb_backups/weekly"
+dir="/data/Mongo_backup/mongodb_backups/daily"
 
 path="$dir/$filename.gz"
 
