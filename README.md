@@ -1,6 +1,7 @@
-# To restore you must run next script with file path, It will restore gzip file into the mongoDB.
+# Mongo BACKUP & RESTORE
+### To restore you must run next script with file path, It will restore gzip file into the mongoDB.
 
-### Script: 
+- __Script__: 
 
 ```bash
 
