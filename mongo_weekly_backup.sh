@@ -1,6 +1,9 @@
 filename=$(date +"%Y-week%V")
-dir="mongodb_backups/weekly"
-path="./$dir/$filename.gz"
+
+pwd=$(pwd)
+dir="$pwd/mongodb_backups/weekly"
+
+path="$dir/$filename.gz"
 
 if [ ! -d "$dir" ]; then
     mkdir -p $dir
@@ -13,7 +16,7 @@ echo "\n---------------------------------------"
 echo "Creating MongoDB backup: $filename\n"
 
 
-mongodump --gzip --archive="$path"
+#mongodump --gzip --archive="$path"
 
 if [ $? -eq 0 ]
     then
