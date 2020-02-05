@@ -1,20 +1,14 @@
+#!/bin/bash
 filename=$(date +"%a")
 dir="/data/Mongo_backup/mongodb_backups/daily"
-
 path="$dir/$filename.gz"
-
 if [ ! -d "$dir" ]; then
     mkdir -p $dir
 fi
-
 date=$(date +"%D")
 echo "\n$date##############################################"
-
 echo "Creating MongoDB backup: $path\n"
-
-
 mongodump --gzip --archive="$path"
-
 if [ $? -eq 0 ]
     then
         echo "-> Backup succeed, created at: $path"
